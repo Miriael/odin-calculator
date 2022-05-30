@@ -96,7 +96,7 @@ function operatorClick(button) {
   currentExpression = display.textContent.split(' ').filter(Boolean)
   if (currentExpression.includes('+') || currentExpression.includes('-') || currentExpression.includes('*') || currentExpression.includes('/')) {
     let result = operate(+currentExpression[0], currentExpression[1], +currentExpression[2]);
-    display.textContent = Math.round(result) + button;
+    display.textContent = result.toFixed(1) + button;
   } else {
     display.textContent += button;
   }
