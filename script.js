@@ -95,8 +95,10 @@ function equalsClick() {
 function operatorClick(button) {
   currentExpression = display.textContent.split(' ').filter(Boolean)
   if (currentExpression.includes('+') || currentExpression.includes('-') || currentExpression.includes('*') || currentExpression.includes('/')) {
-    let result = operate(+currentExpression[0], currentExpression[1], +currentExpression[2]);
-    display.textContent = +result.toFixed(1) + button;
+    if (!(currentExpression.length == 2 && (currentExpression[1] == '+' || currentExpression[1] == '-' || currentExpression[1] == '/' || currentExpression[1] == '*'))) {
+      let result = operate(+currentExpression[0], currentExpression[1], +currentExpression[2]);
+      display.textContent = +result.toFixed(1) + button;
+    }
   } else {
     display.textContent += button;
   }
