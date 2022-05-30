@@ -19,6 +19,7 @@ body {
   padding: 15px;
   display: flex;
   flex-direction: row-reverse;
+  word-wrap: break-word;
   height: 80px;
   align-items: center;
   font-size: 30px;
@@ -45,7 +46,6 @@ button {
   width: 150px;
 }
 
-#add,
 #equals {
   height: 150px;
 }
